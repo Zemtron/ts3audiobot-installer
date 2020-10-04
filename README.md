@@ -5,7 +5,7 @@
 One-Line-Installation:
 
 ```bash
-wget https://raw.githubusercontent.com/xElten/ts3audiobot-installer/master/ts3audiobot1.0.sh && chmod +x ts3audiobot1.0.sh && ./ts3audiobot1.0.sh
+wget https://raw.githubusercontent.com/xElten/ts3audiobot-installer/main/ts3audiobot1.0.sh && chmod +x ts3audiobot1.0.sh && ./ts3audiobot1.0.sh
 ```
 
 ## Contact
