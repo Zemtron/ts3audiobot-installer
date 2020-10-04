@@ -24,15 +24,15 @@ fi
 version="1.0"
 updates_on="1"
 if [ $updates_on -eq 1 ]; then
-curl $timeout --head https://raw.githubusercontent.com/xElten/ts3audiobot-installer/master/version.php | head -n 1 | grep "HTTP/1.[01] [2].." > /dev/$
+curl $timeout --head https://raw.githubusercontent.com/xElten/ts3audiobot-installer/main/version.php | head -n 1 | grep "HTTP/1.[01] [2].." > /dev/$
   	if [ $? = 1 ];
 	then  printf "-"
 	else
-			sversion=$(wget https://raw.githubusercontent.com/xElten/ts3audiobot-installer/master/version.php -q -O -)
+			sversion=$(wget https://raw.githubusercontent.com/xElten/ts3audiobot-installer/main/version.php -q -O -)
 		if [ $sversion \> $version ];
 			then printf "Neue Version verfügbar"
 			sleep 2
-			wget https://raw.githubusercontent.com/xElten/ts3audiobot-installer/master/ts3audiobot-$sversion.sh
+			wget https://raw.githubusercontent.com/xElten/ts3audiobot-installer/main/ts3audiobot-$sversion.sh
 			chmod +x ts3audiobot-$sversion.sh
 			rm ts3audiobot-$version.sh
 			./ts3audiobot-$sversion.sh $1
